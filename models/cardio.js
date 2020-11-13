@@ -4,7 +4,12 @@ const Schema = mongoose.Schema;
 
 const cardioSchema = new Schema({
 
-    type: "cardio",
+    type: {
+        type: string,
+        trim: true,
+        required: "Enter type of workout"
+        
+    },
     name: {
         type: String,
         trim: true,
