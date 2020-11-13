@@ -1,3 +1,3 @@
 const router = require("express").Router();
-const Transaction = require("../models/resistance.js");
-const Transaction = require("../models/resistance.js");
+const resistTransaction = require("../models/resistance.js");
+const cardioTransaction = require("../models/cardio.js");
