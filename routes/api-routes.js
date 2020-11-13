@@ -1,3 +1,4 @@
+var path = require("path");
 const router = require("express").Router();
 const Resistance = require("../models/resistance");
 const Cardio = require("../models/cardio.js");
@@ -30,5 +31,6 @@ router.get("/api/workouts", (req, res) => {
     //             console.log(err)
     //         });
 });
+
 
 module.exports = router;
