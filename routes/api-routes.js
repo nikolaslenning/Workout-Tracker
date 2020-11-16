@@ -14,10 +14,6 @@ router.get("/api/workouts", (req, res) => {
   });
 
 });
-// function logIt(body) {
-//   console.log(body);
-//   return body
-// }
 
 router.post("/api/workouts", async function (req, res) {
   Workout.create({})
@@ -29,11 +25,6 @@ router.post("/api/workouts", async function (req, res) {
     });
 
 });
-// router.post("/api/workouts", async function (req, res) {
-//   console.log("body body body body")
-//   console.log(req);
-//   // var bodyValue = await logIt (body) 
-// });
 
 router.put("/api/workouts/:id", (req, res) => {
   let body = req.body
