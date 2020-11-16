@@ -1,4 +1,5 @@
 var path = require("path");
+const mongojs = require("mongojs");
 const router = require("express").Router();
 const Resistance = require("../models/resistance");
 const Cardio = require("../models/cardio.js");
@@ -31,14 +32,14 @@ router.get("/api/workouts", (req, res) => {
   //             console.log(err)
   //         });
 });
-function logIt(body) {
-  console.log(body);
-  return body
-}
+// function logIt(body) {
+//   console.log(body);
+//   return body
+// }
 
 router.post("/api/workouts", async function (req, res) {
-  // console.log("body body body body")
-  // console.log(req.body);
+  console.log("body body body body")
+  console.log(req.body);
   // var bodyValue = await logIt (body) 
 });
 // router.post("/api/workouts", async function (req, res) {
@@ -50,8 +51,9 @@ router.post("/api/workouts", async function (req, res) {
 router.put("/api/workouts/:id", (req, res) => {
   let body = req.body
   console.log("req.params")
+  // console.log(mongojs.ObjectId(req.params.id))
+  // console.log(req.params)
   console.log(req.params)
-  // console.log(req)
   
   if (body.type === "cardio") {
     console.log('cardio hit')
@@ -70,10 +72,10 @@ router.put("/api/workouts/:id", (req, res) => {
 
       (error, edited) => {
         if (error) {
-          console.log(error);
+          // console.log(error);
           res.send(error);
         } else {
-          console.log(edited);
+          // console.log(edited);
           res.send(edited);
         }
       }
