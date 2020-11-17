@@ -6,7 +6,7 @@ async function initWorkout() {
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
     
-      let result = 0;
+    let result = 0;
     for(i = 0; i<lastWorkout.exercises.length; i++) {
       console.log("hit")
       
