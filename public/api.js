@@ -4,7 +4,7 @@ const API = {
     try {
       res = await fetch("/api/workouts");
     } catch (err) {
-      console.log("error @ api.js line 7")
+      // console.log("error @ api.js line 7")
       console.log(err)
     }
     const json = await res.json();
@@ -14,8 +14,8 @@ const API = {
 
   async addExercise(data) {
     const id = location.search.split("=")[1];
-    console.log("const id in addExercise function, api.js line 17")
-    console.log(id)
+    // console.log("const id in addExercise function, api.js line 17")
+    // console.log(id)
     const res = await fetch("/api/workouts/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
